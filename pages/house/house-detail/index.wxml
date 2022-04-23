@@ -1,0 +1,35 @@
+<!--pages/house/house-detail/index.wxml-->
+<view class="container">
+  <view class="swiper-container">
+    <swiper class="swiper_box" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{house.picUrls}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="house-info">
+    <view class="house-name">{{house.houseName}}</view>
+    <view class="time">{{house.mode == 1 ? '整租': '合租'}} {{house.area}}m²</view>
+    <view class="time">{{house.address}}</view>
+    <view class="price">￥{{house.price}}(元/月)</view>
+  </view>
+
+  <view class="house-info">
+    <view class='title'>房屋描述</view>
+    <rich-text nodes="{{house.describe}}"></rich-text>
+  </view>
+
+  <view class="weui-footer weui-footer_fixed-bottom">
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <button type="primary" class="btn-phone" bindtap="telPhone">电话咨询</button>
+      </view>
+      <view class="weui-flex__item">
+        <button type="warn" class="btn-phone" bindtap="tapBuy">立即租赁</button>
+      </view>
+    </view>
+  </view>
+</view>

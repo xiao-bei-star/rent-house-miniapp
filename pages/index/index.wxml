@@ -1,0 +1,62 @@
+<!--pages/house/house-list/index.wxml-->
+<view class="container">
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜索</view>
+      </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+  </view>
+  <view class='weui-flex category'>
+    <picker bindchange="bindModeChange" class="weui-flex__item" range="{{modes}}">
+      <view class='weui-flex select'>
+        <view class='c_name'>{{modes[modeIndex]}}</view>
+        <image src='/images/down.png'></image>
+      </view>
+    </picker>
+    <picker bindchange="bindTypeChange" class="weui-flex__item" range="{{types}}">
+      <view class='weui-flex select'>
+        <view class='c_name'>{{types[typeIndex]}}</view>
+        <image src='/images/down.png'></image>
+      </view>
+    </picker>
+    <picker bindchange="bindAreaChange" class="weui-flex__item" range="{{areas}}">
+      <view class='weui-flex select'>
+        <view class='c_name'>{{areas[areaIndex]}}</view>
+        <image src='/images/down.png'></image>
+      </view>
+    </picker>
+
+    <picker bindchange="bindPriceChange" class="weui-flex__item" range="{{prices}}">
+      <view class='weui-flex select'>
+        <view class='c_name'>{{prices[priceIndex]}}</view>
+        <image src='/images/down.png'></image>
+      </view>
+    </picker>
+    
+  </view>
+  <view class="house-container">
+      <block wx:for="{{houseList}}" wx:key="index">
+        <navigator url="../house/house-detail/index?houseId={{item.id}}" class="list">
+          <view class="weui-flex">
+          <image class="house-img" src="{{item.picUrl}}" />
+          <view class="weui-flex__item">
+            <view class="house_name">{{item.houseName}}</view>
+            <view class="time">{{item.mode == 1 ? '整租': '合租'}} {{item.area}}m²</view>
+            <view class="time">{{item.address}}</view>
+            <view class="price">￥{{item.price}}(元/月)</view>
+          </view>
+        </view>
+        </navigator>
+      </block>
+  </view>
+</view>

@@ -1,0 +1,82 @@
+/* pages/house/house-list/index.wxss */
+.weui-grids {
+  border: none;
+}
+
+.weui-grid {
+  border: none;
+}
+
+.house-container {
+  padding: 5rpx;
+}
+
+.weui-grid.house {
+  width: 360rpx;
+  background: #FFFFFF;
+  margin: 5rpx;
+  padding: 0rpx;
+}
+
+.weui-grid__icon.house {
+  width: 360rpx;
+  height: 360rpx;
+}
+
+.weui-grid__label.house {
+  text-align: left;
+  padding-left: 5rpx;
+}
+
+.price {
+  font-size: 32rpx;
+  color: #e64340
+}
+
+.list {
+  padding: 6rpx;
+  border-bottom: 1rpx solid #ddd;
+  background: #fff;
+  align-items: center;
+}
+
+.time {
+  font-size: 28rpx;
+  color: #555;
+}
+
+.house_name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 32rpx;
+  width: 490rpx;
+}
+
+.house-img {
+  width: 240rpx;
+  height: 180rpx;
+  margin-right: 10rpx;
+}
+
+.category {
+  background: #fff;
+  border-bottom: 1rpx solid #eee;
+}
+
+.category picker {
+  font-size: 28rpx;
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+  text-align: center;
+}
+
+.select {
+  justify-content: center;
+  align-items: center;
+}
+
+.select image {
+  width: 22rpx;
+  height: 22rpx;
+}

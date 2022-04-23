@@ -1,0 +1,51 @@
+<!--pages/confirm-order/index.wxml-->
+<view class="container">
+  <button open-type="share" class="share-img" hidden='true'></button>
+  <form report-submit="true" bindsubmit='confirmOrder'>
+    <view class='house-list'>
+      <view class="house" wx:for="{{houseList}}" wx:key="index">
+        <image mode="scaleToFill" src='{{item.picUrl}}'></image>
+        <view>
+          <view class="house-title">{{item.houseName}}</view>
+          <view class='house-item price'>{{item.price}}(元/月)</view>
+        </view>
+      </view>
+    </view>
+    <view class='house-info'>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">开始日期</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker mode="date" bindchange="changeDate">
+            <view class="weui-input">{{date}}</view>
+          </picker>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">月数</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input name="days" class="weui-input" bindchange="changeDays" value="1" placeholder="月数"/>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <textarea name="remark" placeholder='备注'></textarea>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="footer-box">
+
+      <view class='weui-flex foot-buy'>
+        <view class='weui-flex__item total-amount'>{{totalAmount}}</view>
+        <button class="now-buy" form-type='submit'>提交订单</button>
+      </view>
+
+    </view>
+  </form>
+</view>

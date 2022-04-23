@@ -1,0 +1,43 @@
+<!--pages/car/car-list/index.wxml-->
+<view class="container">
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜索</view>
+      </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+  </view>
+  <view class="car-container">
+    <view class="weui-grids">
+      <block wx:for="{{carList}}" wx:key="index">
+        <navigator url="../car-detail/index?carId={{item.id}}" class="list">
+          <view class="weui-flex">
+          <image class="car-img" src="{{item.picUrl}}" />
+          <view>
+            <view class="weui-grid__label car_name">{{item.carName}}</view>
+            <view class="weui-grid__label time">{{item.attribute}}</view>
+            <view class="weui-grid__label price">￥{{item.price}}(元/月)</view>
+          </view>
+        </view>
+        <view class="time">
+          <view>
+            店铺名称：{{item.store.storeName}}
+          </view>
+          <view>
+            店铺地址：{{item.store.address}}
+          </view>
+        </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+</view>
