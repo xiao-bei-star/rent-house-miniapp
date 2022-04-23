@@ -91,6 +91,6 @@ App({
     userInfo: null,
     //domain: "http://www.wfuhui.com"
     domain: "http://192.168.0.114:10086",
-    picRootPath: "http://localhost:10086"
+    picRootPath: "http://192.168.0.114:10086"
   }
 })
