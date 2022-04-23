@@ -90,7 +90,7 @@ App({
   globalData: {
     userInfo: null,
     //domain: "http://www.wfuhui.com"
-    domain: "http://127.0.0.1:10086",
-    picUrl: "http://localhost:10086"
+    domain: "http://192.168.0.114:10086",
+    picRootPath: "http://localhost:10086"
   }
 })

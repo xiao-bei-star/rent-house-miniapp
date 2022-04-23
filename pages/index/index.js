@@ -236,7 +236,8 @@ Page({
         }
         var house = that.data.houseList;
         for (var i = 0; i < res.data.houseList.length; i++) {
-          res.data.houseList[i].picUrl = app.globalData.picUrl + res.data.houseList[i].picUrl;
+          var picUrl = res.data.houseList[i].picUrl;
+          res.data.houseList[i].picUrl = app.globalData.picRootPath + picUrl;
           house.push(res.data.houseList[i]);
         }
         that.setData({
