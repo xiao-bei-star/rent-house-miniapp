@@ -1,5 +1,5 @@
 <view class="container">
-  <form bindsubmit="formSubmit">
+  <form bindsubmit="formSubmit" class="register-main">
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
         <view class="weui-cell__hd">
@@ -43,8 +43,8 @@
         </view>
       </view>
     </view>
-    <view class="weui-btn-area">
-      <button type="primary" formType="submit">注册</button>
+    <view class="register-button">
+      <button formType="submit">注册</button>
     </view>
   </form>
 </view>

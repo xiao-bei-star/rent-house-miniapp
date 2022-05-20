@@ -17,6 +17,9 @@ Page({
         token: app.globalData.token
       },
       success: function (res) {
+        if(!res.data.member.openid) {
+          res.data.member.avatarUrl = app.globalData.picRootPath + res.data.member.avatarUrl;
+        }
         that.setData({
           memberInfo: res.data.member
         });

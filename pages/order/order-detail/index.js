@@ -7,7 +7,8 @@ Page({
    */
   data: {
     order: {},
-    totalAmount: ''
+    totalAmount: '',
+    picturl:app.globalData.picRootPath
   },
 
   /**

@@ -1,10 +1,27 @@
 /* pages/house/house-list/index.wxss */
-.weui-grids {
+.weui-grid {
   border: none;
 }
 
-.weui-grid {
-  border: none;
+.header-bar{
+  background-color:#ff7f7f;
+  height: 160rpx;
+}
+
+.banner-img{
+  position:absolute;
+  width: 180rpx;
+  height: 140rpx;
+  left: 50%;
+  margin-left: -90rpx;
+}
+
+.c_name{
+  font-size: 26rpx;
+}
+
+.weui-search-bar{
+  background: linear-gradient(#ff7f7f, #fff); 
 }
 
 .house-container {
@@ -30,33 +47,40 @@
 
 .price {
   font-size: 32rpx;
-  color: #e64340
+  color: #e64340;
+  font-weight: 600;
 }
 
-.list {
-  padding: 6rpx;
-  border-bottom: 1rpx solid #ddd;
-  background: #fff;
-  align-items: center;
+.house-list {
+  margin:50rpx 20rpx;
+  background-color: #fff;
+  border-radius: 25rpx;
 }
 
-.time {
-  font-size: 28rpx;
-  color: #555;
+.house-img {
+  width: 100%;
+  height: 350rpx;
+  border-top-left-radius: 25rpx;
+  border-top-right-radius: 25rpx;
 }
 
 .house_name {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 32rpx;
+  font-size: 36rpx;
   width: 490rpx;
+  font-weight: 500;
 }
 
-.house-img {
-  width: 240rpx;
-  height: 180rpx;
-  margin-right: 10rpx;
+.house-price{
+  display: flex;
+  flex-direction: row;
+}
+
+.time {
+  font-size: 32rpx;
+  color: #555;
 }
 
 .category {

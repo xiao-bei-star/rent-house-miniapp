@@ -1,34 +1,37 @@
 <!--pages/house/house-detail/index.wxml-->
 <view class="container">
   <view class="swiper-container">
-    <swiper class="swiper_box" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <swiper class="swiper_box" 	indicator-dots="true" 	indicator-color="#999" 	indicator-active-color="#fff" interval="{{interval}}" duration="{{duration}}">
       <block wx:for="{{house.picUrls}}" wx:key="index">
         <swiper-item>
-          <image src="{{item}}" class="slide-image" />
+          <image src="{{picturl}}{{item}}" class="slide-image" />
         </swiper-item>
       </block>
     </swiper>
   </view>
-
   <view class="house-info">
     <view class="house-name">{{house.houseName}}</view>
-    <view class="time">{{house.mode == 1 ? '整租': '合租'}} {{house.area}}m²</view>
-    <view class="time">{{house.address}}</view>
-    <view class="price">￥{{house.price}}(元/月)</view>
+    <view class="house-time">发布时间：{{house.createTime}}</view>
+    <view class="home-price">￥{{house.price}}(元/月)</view>
+    <view class="house-info-tab">
+    <view class="house-tab">
+      <text class="house-type">{{house.mode == 1 ? '整租': '合租'}}</text>
+      <text class="house-type">{{house.area}}m²</text>
+      <text class="house-type">{{house.address}}</text>
+    </view>
+    <rich-text class="houst-nodes" nodes="{{house.describe}}"></rich-text>
+    </view>
   </view>
 
-  <view class="house-info">
-    <view class='title'>房屋描述</view>
-    <rich-text nodes="{{house.describe}}"></rich-text>
-  </view>
-
-  <view class="weui-footer weui-footer_fixed-bottom">
-    <view class="weui-flex">
-      <view class="weui-flex__item">
-        <button type="primary" class="btn-phone" bindtap="telPhone">电话咨询</button>
+  <view class="fixed-bottom">
+    <view class="flex_item">
+      <view type="primary" class="btn-tocall" bindtap="toCalling">
+        <image class="logo-img" src="../../../images/logo-phone.png"></image>
+        <view>电话咨询</view>
       </view>
-      <view class="weui-flex__item">
-        <button type="warn" class="btn-phone" bindtap="tapBuy">立即租赁</button>
+      <view type="warn" class="btn-tocall" bindtap="tapBuy">
+        <image class="logo-img" src="../../../images/logo_home.png"></image>
+        <view>立即租赁</view>
       </view>
     </view>
   </view>

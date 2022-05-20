@@ -2,35 +2,58 @@
 
 .container{
   padding-bottom: 100rpx;
+  position: relative;
 }
 
 swiper{
-  height: 750rpx;
+  height: 550rpx;
 }
 
 .slide-image{
   width: 750rpx;
-  height: 750rpx;
+  height: 550rpx;
+}
+
+.house-name {
+  text-align: center;
+  font-weight: 700;
+}
+
+.house-time {
+  text-align: center;
+  color: #999;
+  font-size: 28rpx;
+}
+
+.home-price{
+  text-align: center;
+  margin-top: 10rpx;
+  color: #e64340;
+  font-weight: 700;
+  font-size: 38rpx;
+}
+
+.house-type{
+  font-size: 26rpx;
+  border-radius: 25rpx;
+  padding: 8rpx 15rpx;
+  border: 1rpx solid #999;
+  margin: 0rpx 8rpx;
+}
+
+.house-tab{
+  margin-top: 30rpx;
+  border-top: 1rpx solid #999;
+  padding: 30rpx 0rpx;
+}
+
+.houst-nodes{
+  margin: 0rpx 20rpx;
+  color: rgb(85, 82, 82);
 }
 
 .wxParse-p{
   overflow: hidden
-}
-
-.btn-phone{
-  width: 100%;
-  border-radius: 0;
-}
-
-.footer-box {
-  width: 100%;
-  height: 100rpx;
-  background-color: #fff;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  box-shadow:0 0 8rpx 0 ;
 }
 
 .footer-box .shop-houset-btn {
@@ -106,19 +129,43 @@ button[class="now-appoint"]::after {
   margin-bottom: 15rpx;
 }
 
-.house-info .price{
-  font-size: 32rpx;
-  color: #e64340
-}
-
 .house-info .title {
   font-size: 32rpx;
   font-weight: bold;
-  margin-bottom: 20rpx;
+  margin-bottom: 16rpx;
 }
 
-.weui-footer_fixed-bottom{
-  bottom: 0
+.fixed-bottom{
+  position: fixed;
+  width: 100%;
+  bottom : 0;
+  background-color: #fff;
+}
+
+.flex_item{
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  background-color: #ff7f7f;
+  border-radius: 25rpx;
+  color: #fff;
+  font-weight: 700;
+  margin-left: 150rpx;
+}
+
+.logo-img{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.btn-tocall{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  width: 50%;
+  margin-left: 30rpx;
 }
 
 button:not([size='mini']) {

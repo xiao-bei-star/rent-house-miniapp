@@ -40,7 +40,7 @@ Page({
         success: function (res) {
           if(res.data.code == 0){
             wx.navigateBack({
-              
+              delta: 0,
             })
           }else{
             wx.showModal({

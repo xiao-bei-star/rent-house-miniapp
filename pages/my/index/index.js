@@ -47,6 +47,9 @@ Page({
       },
       success: function (res) {
         if (res.data.code == 0) {
+          if(!res.data.member.openid) {
+            res.data.member.avatarUrl = app.globalData.picRootPath + res.data.member.avatarUrl;
+          }
           that.setData({
             member: res.data.member
           })

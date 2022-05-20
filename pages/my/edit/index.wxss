@@ -3,6 +3,10 @@ page{
   height: 100%;
 }
 
+.container{
+  background: linear-gradient(#fff, #ffd1d1);
+}
+
 .userinfo{
   background: #fff;
   text-align: center;

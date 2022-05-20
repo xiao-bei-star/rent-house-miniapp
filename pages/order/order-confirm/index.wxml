@@ -4,10 +4,10 @@
   <form report-submit="true" bindsubmit='confirmOrder'>
     <view class='house-list'>
       <view class="house" wx:for="{{houseList}}" wx:key="index">
-        <image mode="scaleToFill" src='{{item.picUrl}}'></image>
+        <image mode="scaleToFill" src='{{picturl}}{{item.picUrl}}'></image>
         <view>
           <view class="house-title">{{item.houseName}}</view>
-          <view class='house-item price'>{{item.price}}(元/月)</view>
+          <view class='house-item price'>{{item.price}}元/月</view>
         </view>
       </view>
     </view>
@@ -25,14 +25,14 @@
         </view>
         <view class="weui-cell weui-cell_input">
           <view class="weui-cell__hd">
-            <view class="weui-label">月数</view>
+            <view class="weui-label">租赁月数</view>
           </view>
           <view class="weui-cell__bd">
             <input name="days" class="weui-input" bindchange="changeDays" value="1" placeholder="月数"/>
           </view>
         </view>
         <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__bd">
+          <view class="weui-cell__bd" style="margin-top:10rpx">
             <textarea name="remark" placeholder='备注'></textarea>
           </view>
         </view>
@@ -42,7 +42,7 @@
     <view class="footer-box">
 
       <view class='weui-flex foot-buy'>
-        <view class='weui-flex__item total-amount'>{{totalAmount}}</view>
+        <view class='weui-flex__item total-amount'>￥{{totalAmount}}</view>
         <button class="now-buy" form-type='submit'>提交订单</button>
       </view>
 

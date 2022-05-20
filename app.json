@@ -15,7 +15,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "微服汇-租赁",
+    "navigationBarTitleText": "悠租客-详情",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {

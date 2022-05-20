@@ -9,7 +9,7 @@ scroll-view{
 .userinfo {
   display: flex;
   padding: 40rpx;
-  background: #00bfe0;
+  background: linear-gradient(#ff7f7f, #fff); 
   align-items: center;
   vertical-align: middle;
 }

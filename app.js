@@ -20,7 +20,7 @@ App({
           },
           success: function (res) {
             if (res.data.code == 1) {
-              that.globalData.sessionKey = res.data.sessionKey; //暂时，不应该在网络传输
+              that.globalData.sessionKey = res.data.sessionKey;
               // 去注册
               that.register(callback);
               return;
@@ -37,7 +37,6 @@ App({
             }
             that.globalData.token = res.data.token;
             that.globalData.userInfo = res.data.userInfo;
-
             callback();
           }
         })
@@ -46,7 +45,7 @@ App({
   },
 
   //注册
-  register: function (callback) {
+  register: function (userInfo,callback) {
     var that = this;
     wx.login({
       success: function (res) {
@@ -58,9 +57,9 @@ App({
               url: that.globalData.domain + '/api/wechat/register',
               data: {
                 code: code,
-                avatarUrl: resUser.userInfo.avatarUrl,
-                nickname: resUser.userInfo.nickName,
-                gender: resUser.userInfo.gender
+                avatarUrl: userInfo.avatarUrl,
+                nickname: userInfo.nickName,
+                gender: userInfo.gender
               }, // 设置请求的 参数
               success: (res) => {
                 if (res.data.code == 0) {
@@ -89,8 +88,10 @@ App({
 
   globalData: {
     userInfo: null,
-    //domain: "http://www.wfuhui.com"
-    domain: "http://192.168.0.114:10086",
-    picRootPath: "http://192.168.0.114:10086"
+    // domain: "http://localhost:10086",
+    // picRootPath: "http://localhost:10086",
+    // 调试手机端用IP地址
+    domain: "http://192.168.1.219:10086",
+    picRootPath: "http://192.168.1.219:10086"
   }
 })

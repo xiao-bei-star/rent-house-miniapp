@@ -5,7 +5,8 @@ Page({
   data: {
     tabs: ["全部", "待付款", "租赁中", "已退租"],
     activeIndex: 0,
-    statuses: ''
+    statuses: '',
+    picturl:app.globalData.picRootPath
   },
 
   tabClick: function (e) {

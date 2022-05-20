@@ -76,6 +76,10 @@ Page({
             wx.navigateBack({
               delta: 0,
             })
+          }else{
+            wx.navigateBack({
+              delta: 0,
+            })
           }
         })
       },

@@ -9,7 +9,8 @@ Page({
    */
   data: {
     totalAmount: 0,
-    price: 0
+    price: 0,
+    picturl:app.globalData.picRootPath
   },
 
   changeDate(e) {

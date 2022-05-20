@@ -1,5 +1,5 @@
 <wxs module="util" src="../../../utils/util.wxs"></wxs>
-<view class="container">
+<view class="padding-text">
   <view class="weui-tab">
     <view class="weui-navbar">
       <block wx:for="{{tabs}}" wx:key="*this">
@@ -21,7 +21,7 @@
           <view class='order-time'>订单编号：{{item.orderNumber}}</view>
           <view class='order-time'>下单时间：{{util.formatTimestamp(item.createTime)}}</view>
           <view class="weui-flex house-info" wx:for="{{item.orderHouseList}}" wx:key="index" wx:for-item="house">
-            <image src="{{house.picUrl}}" class="image" mode='scaleToFill' />
+            <image src="{{picturl}}{{house.picUrl}}" class="image" mode='scaleToFill' />
             <view class="info">
               <view class="house-title">{{house.houseName}}</view>
               <view class="house-author">{{item.startDate}}至{{item.endDate}}</view>

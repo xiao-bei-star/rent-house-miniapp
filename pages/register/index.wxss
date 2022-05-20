@@ -1,1 +1,14 @@
 /* pages/login/login.wxss */
+.container{
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(#fff,#ff7f7f);
+}
+
+.register-main{
+  margin: 30rpx 20rpx 30rpx;
+}
+
+.register-button{
+  margin-top: 150rpx;
+}

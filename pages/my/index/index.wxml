@@ -19,11 +19,11 @@
   </view>
 
   <view class="weui-btn-area" wx:if="{{member}}">
-    <button type="primary" class="weui-btn" bindtap="logout">退出</button>
+    <button type="primary" class="weui-btn " bindtap="logout">退出</button>
   </view>
 
   <view class="weui-footer weui-footer_fixed-bottom">
-    <view class="weui-footer__text">Copyright © 2018-2021 wfuhui.com</view>
+    <view class="weui-footer__text">@ 无忧租房——为每个找房人提供安心</view>
   </view>
 
 

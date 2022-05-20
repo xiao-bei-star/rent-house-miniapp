@@ -140,7 +140,7 @@ swiper-item image {
   height: 100rpx;
   width: 220rpx;
   line-height: 100rpx;
-  background-color: #ef8203;
+  background-color: #ff6850;
   color: #fff;
   font-size: 34rpx;
   border-radius: 0;

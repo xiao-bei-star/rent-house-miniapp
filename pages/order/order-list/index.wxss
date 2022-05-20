@@ -2,6 +2,10 @@ page{
   background: #f7f7f7
 }
 
+.padding-text {
+  margin:30rpx ;
+}
+
 .weui-navbar__slider {
   width: 57.6px;
 }

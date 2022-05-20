@@ -37,7 +37,7 @@
         </view>
         <view class="weui-cell__bd">
           <radio-group bindchange="genderChange" name="gender">
-            <radio value="1" checked="{{member.gender == 1}}">男</radio>
+            <radio value="1" checked="{{member.gender == 1}}" style="margin-right:20rpx;">男</radio>
             <radio value="0" checked="{{member.gender == 0}}">女</radio>
           </radio-group>
         </view>
@@ -45,7 +45,7 @@
      
     </view>
     <view class="weui-btn-area">
-      <button type="primary" formType="submit">保存</button>
+      <button style="background-color:#ff9999;margin-top:150rpx" formType="submit">保存</button>
     </view>
     <view class="weui-btn-area" hidden='{{!address}}'>
       <button type="warn" bindtap="deleteAddress" data-id="{{address.id}}">删除该地址</button>

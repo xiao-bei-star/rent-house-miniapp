@@ -11,7 +11,8 @@ Page({
     duration: 1000,
     house: {},
     houseNum: 0,
-    shopHouset: []
+    shopHouset: [],
+    picturl:app.globalData.picRootPath
   },
 
   /**
@@ -22,9 +23,17 @@ Page({
     this.getHouse(options.houseId);
   },
 
-  //租赁
-  toRent(){
-    
+  //打电话
+  toCalling: function () {
+    wx.makePhoneCall({
+      phoneNumber: '12345678900', //此号码并非真实电话号码，仅用于测试
+      success: function () {
+        console.log("拨打电话成功！")
+      },
+      fail: function () {
+        console.log("拨打电话失败！")
+      }
+    })
   },
 
   getHouse: function (houseId) {

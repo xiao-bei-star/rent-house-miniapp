@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    member: null
+    member: null,
+    picturl:app.globalData.picRootPath
   },
 
   /**

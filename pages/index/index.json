@@ -1,4 +1,8 @@
 {
-  "navigationBarTitleText": "房屋列表",
-  "enablePullDownRefresh": true
+  "navigationBarTitleText": "悠租客",
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#ff7f7f",
+  "navigationBarTextStyle": "white",
+  "font-style":"Sans-serif",
+  "backgroundColor": "#ff7f7f"
 }
